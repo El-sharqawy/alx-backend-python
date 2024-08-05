@@ -16,6 +16,6 @@ async def wait_n(n: int, max_delay: int) -> typing.List[float]:
 
     resultsArr = []
     for task in asyncio.as_completed(myArr):
-        resultsArr.append(wait task)
+        resultsArr.append(await task)
 
     return resultsArr
